@@ -9,8 +9,7 @@ passport.use( new LocalStrategy({ usernameField: 'email',passwordField:'password
   const result = await Auth.find({
     email:username
   })
-  // console.log(await Auth.find());
-  // console.log(result);
+//   console.log(result.length);
   if (result.length != 1) {
     return done(null,false,{ info:"You are not a valid user" })  
   }else{
@@ -30,6 +29,7 @@ passport.serializeUser(function (user, done) {
 });
 
 passport.deserializeUser(async function(id, done) {
+  
   console.log('deserializeUser (lookup) ' + JSON.stringify(id.info))
   const result = await Auth.find({
     email:id.info

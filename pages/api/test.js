@@ -2,7 +2,7 @@ import handler from "./handler";
 import Product from '../../models/shop'
 import proImg from "../../models/proimg";
 import Cart from "../../models/cart";
-import Auth from "../../models/auth";
+// import Auth from "../../models/auth";
 import mongoose from "mongoose";
 
 handler.get(async (req,res)=>{
@@ -22,8 +22,12 @@ handler.get(async (req,res)=>{
         
         await proImg.find()
         await Cart.find()
-        const auth = await Auth.find()
+        // const auth = await Auth.find()
         console.log(auth);
+        console.log();
+        const object =  await Cart.deleteOne({ slug: 'puma-buzz' })
+        console.log(object);
+
         // console.log(process.env.MONGODB_URI);
         // console.log(data);
         res.json({

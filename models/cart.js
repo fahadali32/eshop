@@ -1,5 +1,6 @@
 import mongoose from "../pages/api/mongo";
 var Schema = mongoose.Schema;
+var mongoose_delete = require('mongoose-delete');
 
 var Cart = new Schema({
   title: {
@@ -28,6 +29,7 @@ var Cart = new Schema({
 });
 
 mongoose.models = {};
+Cart.plugin(mongoose_delete);
 
 var Cart = mongoose.model('Cart', Cart);
 

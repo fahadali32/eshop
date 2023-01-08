@@ -12,7 +12,7 @@ var Auth = new Schema({
   },
   username: {
     type: String,
-    required:true
+    required: true
   },
   first_name: {
     type: String,
@@ -22,9 +22,9 @@ var Auth = new Schema({
     type: String,
     required: true
   },
-  did:{
-    type:String,
-    require:true
+  did: {
+    type: String,
+    require: true
   },
 });
 

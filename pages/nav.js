@@ -19,7 +19,12 @@ function Nav(props) {
   const [isAuth,setAuth] = useState()
 
   useEffect(()=>{
-    getSession().then(data=> setAuth(data))
+    async function getAuth() {
+      // const result = await axios.get("/api/auth/login",{ withCredentials:true })
+      // eslint-disable-next-line react-hooks/rules-of-hooks
+      
+      setAuth(null)
+    }getAuth()
   },[])
 
   async function getOption(){

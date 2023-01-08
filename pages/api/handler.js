@@ -42,11 +42,6 @@ const handler = nc({
     cookie: { secure : false, maxAge: 60 * 60 * 1000 },
     store 
   }))
-  
-  handler.use(passport.initialize())
-  handler.use(passport.session())
-  
-
 
 export default handler;
 

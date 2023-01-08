@@ -52,7 +52,7 @@ function Poster() {
       window.clearInterval(timer);
     };
 
-  },[count, proImage])
+  },[count, img, proImage])
   
   return (
     <div style={{background:'black'}}>

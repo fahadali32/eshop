@@ -12,7 +12,7 @@ function Login(props) {
     
     async function fetchData() {
       const pro = await axios.get(`${window.origin}/api/`,{ withCredentials:true })
-      //console.log(pro);
+      
       function findSum(A, N) {
         if (N <= 0)
             return 0;
@@ -20,22 +20,21 @@ function Login(props) {
       }
       const temp = findSum(pro.data?.adpd,pro.data?.adpd?.length)
       setQty(temp)
-      // setQty(pro.data?.adpd?.length)
+      
     }
     fetchData()
 
   },[])
   
     const router = useRouter()
-    //console.log(props);
-    //console.log(`${window.origin}/api/auth/login`);
+    
     async function submitForm(e) {
         e.preventDefault()
         const email = e.target.email.value
         const password = e.target.password.value
         axios.defaults.withCredentials = true
             
-        const result = await axios.post(`${window.origin}/api/auth/login`,{
+        const result = await axios.post(`${window.origin}/api/users/login`,{
             email:email,
             password:password
         },{
@@ -47,7 +46,7 @@ function Login(props) {
         )
         console.log(result.data);
         if(result.status == 200){
-            router.push("/")
+            // router.push("/")
         }
     }
   return (
