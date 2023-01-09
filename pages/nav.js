@@ -6,7 +6,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import styles from '../styles/Home.module.css'
 import Bar from "./components/bar";
 import Cls from "./components/clsbtn"
-import { getSession } from "../lib/auth";
+import { useUser } from "../lib/auth";
 import axios from "axios";
 import { useRouter } from "next/router";
 function Nav(props) {
@@ -18,17 +18,13 @@ function Nav(props) {
   const [display,setDisplay] = useState("none")
   const [isAuth,setAuth] = useState()
 
+  const user = useUser()
   useEffect(()=>{
-    async function getAuth() {
-      // const result = await axios.get("/api/auth/login",{ withCredentials:true })
-      // eslint-disable-next-line react-hooks/rules-of-hooks
-      
-      setAuth(null)
-    }getAuth()
-  },[])
-
+    setAuth(user)
+  },[user])
+  
   async function getOption(){
-    const pro = await axios.get(`${window.origin}/api/auth/logout`,{ withCredentials:true })
+    const pro = await axios.post(`${window.origin}/api/logout`,{ withCredentials:true })
     console.log(pro)
     if (pro.data) {
       router.push('/').then(() => router.reload())

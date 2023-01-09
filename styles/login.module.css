@@ -1,0 +1,63 @@
+.formBd {
+  background: linear-gradient(
+    139.46deg,
+    rgba(255, 255, 255, 0.46) 2.65%,
+    rgba(255, 255, 255, 0) 101.52%
+  );
+  border: 1px solid #ffffff0d;
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
+  padding: 10vmin;
+  margin-top: 15vmin;
+  border-radius: 10%;
+  box-shadow: 1px 0px 20px 2px #e6e6e6;
+  z-index: 1;
+}
+.formBd > h1 {
+  text-align: center;
+}
+.formCv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inputData {
+  padding: 10px;
+  border-radius: 11px;
+  margin-top: 14px;
+}
+.sbbtn {
+  padding: 10px;
+  width: 100%;
+  background: black;
+  color: white;
+  font-weight: bold;
+  border-radius: 11px;
+  margin-top: 14px;
+}
+.ball1 {
+  position: absolute;
+  width: 18vw;
+  height: 20vw;
+  left: 640px;
+  top: 37%;
+  border-radius: 50%;
+  background: linear-gradient(
+    317deg,
+    rgba(9, 9, 9, 0.92) 24.99%,
+    #ffffff 86.32%
+  );
+}
+.ball2 {
+  position: absolute;
+  width: 18vw;
+  height: 20vw;
+  left: 640px;
+  top: 37%;
+  border-radius: 50%;
+  background: linear-gradient(
+    317deg,
+    rgba(9, 9, 9, 0.92) 24.99%,
+    #ffffff 86.32%
+  );
+}
