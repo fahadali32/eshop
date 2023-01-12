@@ -46,7 +46,7 @@ handler.post(async function (req,res,next) {
     }
 
     if (!user) {
-      return res.status(500).json(info)
+      return res.status(200).json(info)
     }
 
     req.logIn(user,async function(err) {

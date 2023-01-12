@@ -10,11 +10,21 @@ handler.use(passport.initialize());
 handler.use(passport.session());
 
 handler.post(function(req, res, next) {
-    req.logout(function(err) {
-      if (err) { return next(err); }
-      res.clearCookie("connect.sid");
-      res.json("hi")
-    });
-  
+    // req.logout(function(err) {
+    //   if (err) { return next(err); }
+    //   req.session.destroy()
+    //   // res.clearCookie("connect.sid");
+    //   res.json("hi")
+    // });
+    if (req.session) {
+      req.session.destroy((err) => {
+        if (err) {
+          next(err)
+        } else {
+          res.clearCookie('connect.sid')
+          res.status(200).json(ture)
+        }
+      })
+    }
 });
 export default handler;

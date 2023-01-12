@@ -35,6 +35,14 @@
   border-radius: 11px;
   margin-top: 14px;
 }
+.warn{
+  background-color: rgb(251, 136, 136);
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 7px;
+  color: white;
+}
+
 .ball1 {
   position: absolute;
   width: 18vw;

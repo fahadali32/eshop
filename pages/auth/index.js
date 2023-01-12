@@ -1,8 +1,7 @@
 import axios from 'axios';
 import passport from 'passport';
 import React, { useEffect, useState } from 'react'
-import { getSession } from '../../lib/auth';
-
+import { getSession } from '../../lib/auth'
 
 function Index(props) {
   const [authData,setAuthdata] = useState()
