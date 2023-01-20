@@ -25,6 +25,7 @@ function Design(props) {
       </div>
       <button onClick={()=>{ deleteItem(props) }} className={styles.trash}><VscTrash style={{color:"red"}}/></button>
     </div>
+    
   )
 }
 

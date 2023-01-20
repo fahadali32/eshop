@@ -28,7 +28,7 @@ handler.get(async(req,res)=>{
     }else{
       res.json({data:data,adpd:{}})
     }
-    
+    // console.log(req.session,req.session.id)
     // console.log(process.env.MONGODB_URI);
 })
 

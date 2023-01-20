@@ -24,11 +24,7 @@ function Nav(props) {
   },[user])
   
   async function getOption(){
-    const pro = await axios.post(`${window.origin}/api/logout`,{ withCredentials:true })
-    console.log(pro.data)
-    if (pro.data) {
-      router.push('/auth/login').then(() => router.reload())
-    }
+    router.push('/auth/logout').then(() => router.reload())
   }
   function find(e) {
 
