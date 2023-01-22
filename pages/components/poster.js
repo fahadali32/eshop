@@ -29,7 +29,7 @@ function Poster() {
       // document.querySelector('#poster').style != null ? document.querySelector('#poster').style.backgroundImage = `url(${proImage[count-1]})` : null
       // document.querySelector('#poster').style.backgroundImage = `url(${proImage[count-1]})`
       setImg(proImage[count-1])
-      console.log(img);
+      // console.log(img);
     }, 3000);
     
     document.querySelector("#move").onmousemove = function () {

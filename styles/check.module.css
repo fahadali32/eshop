@@ -1,0 +1,48 @@
+.formMain{
+    display: flex;
+    align-items: flex-start;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 50px;
+    justify-content: center;
+}
+.checkForm{
+    display: flex;
+    box-shadow: 0px 4px 15px 4px rgb(0 0 0 / 10%);
+    justify-content: center;
+    align-content: center;
+    align-items: flex-start;
+    width: 43%;
+    border-radius: 15px;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.checkForm > form > table > tbody > tr > td {
+    padding: 5px;
+}
+
+.formInput{
+    width: 100%;
+    font-size: 1.5vw;
+    height: 4vmin;
+    border-radius: 6px;
+    border: 1px solid gray;
+}
+.priceBox{
+    box-shadow: 0px 4px 15px 4px rgb(0 0 0 / 10%);
+    width: 20vw;
+    height: 15vw;
+    margin-left: 30px;
+}
+.payBtn{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    width: 100%;
+    height: 4.5vmin;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: larger;
+}

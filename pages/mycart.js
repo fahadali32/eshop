@@ -135,13 +135,6 @@ export default function Home(props) {
 
   }
   
-  // console.log(adpd);
-  // const total = adpd.reduce((acc, curr) => {
-  //   return acc + curr.price*curr.qty
-  // }, 0)
-  // console.log(total);
-  //console.log( isAuth?.passport ? "asi" :"nai" );
-  // console.log(adpd);
   return (
     <div>
       <Head>
@@ -192,7 +185,7 @@ export default function Home(props) {
             <h3>Shipping:10$</h3><br/>
             <hr></hr>
             <h2>Total:{adpd.reduce((acc, curr) => { return acc + curr.price*curr.qty }, 0)+10}$</h2><br/>
-            <Link href={'/checkout'}><a><button className={styles.checkOut}>Checkout to proceed</button></a></Link>
+            <Link href={'/order'}><a><button className={styles.checkOut}>Checkout to proceed</button></a></Link>
             
           </div>
           : ""}

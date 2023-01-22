@@ -39,7 +39,7 @@ passport.deserializeUser(async function (id, done) {
     const result = await Auth.find({
       email: id?.info
     })
-    done(null, result)
+    done(null, done)
   } catch (error) {
     console.log('deserializeUser (lookup) ' + JSON.stringify(id.info))
     // console.log('error');

@@ -1,9 +1,8 @@
 import mongoose from "../pages/api/mongo";
-import Auth from "./auth";
 var Schema = mongoose.Schema;
 var mongoose_delete = require('mongoose-delete');
 
-var Cart = new Schema({
+var Order = new Schema({
   title: {
     type: String,
     required: true
@@ -27,12 +26,15 @@ var Cart = new Schema({
     type:String,
     require:true
   },
-  
+  user:{
+    type:String,
+    require:true
+  }
 });
 
 mongoose.models = {};
-Cart.plugin(mongoose_delete);
+Order.plugin(mongoose_delete);
 
-var Cart = mongoose.model('Cart', Cart);
+var Order = mongoose.model('Order', Order);
 
-export default Cart;
+export default Order;
