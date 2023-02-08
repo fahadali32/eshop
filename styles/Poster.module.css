@@ -38,7 +38,7 @@
         height: 30vmax;
         position: relative;
         left: -12vw;
-        top: 4vw;
+        top: 3.3vw;
         border-radius: 10vw;    
         background: linear-gradient(244.9deg, #797979 -57.14%, #3A3A3A -0.57%, #454545 33.07%, #5B5B5B 65.95%);
         box-shadow: -2px 4px 69px rgb(0 0 0 / 25%);
@@ -51,10 +51,10 @@
     }
     .shopNow{
         position: absolute;
-        width: 23vw;
+        width: 47vmin;
         height: 7vw;
         left: 53px;
-        top: 30vmax;
+        top: 67vmin;
         color: white;
         font-size: 3vmax;
         background: linear-gradient(244.9deg, #797979 -57.14%, #3A3A3A -0.57%, #454545 33.07%, #5B5B5B 65.95%);

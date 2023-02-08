@@ -270,7 +270,7 @@ justify-content: space-between; */
         margin: 10px;
     }
     .navbar > div{
-        margin: 2px;
+        margin: 25px;
     }
 }
 
@@ -527,6 +527,16 @@ justify-content: space-between; */
         color: red;
         font-size: xx-large;
     }
+    .cartBody2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        /* margin: 76px; */
+        padding: 40vmin;
+        padding-top: 0px;
+    }
     
 }
 @media (max-width: 600px) {
@@ -541,4 +551,13 @@ justify-content: space-between; */
         margin-left: 0px;
         margin-right: 0px;
     }
+}
+
+.cartBody2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 1vmax;
+    justify-content: center;
+    align-items: center;
 }

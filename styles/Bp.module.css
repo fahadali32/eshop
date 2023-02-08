@@ -1,0 +1,155 @@
+.table > tbody > tr > td{
+    padding: 9px;
+}
+.mainBp {
+  background-color: white;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row; */
+}
+.box1{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.card1 {
+    background-image: url('/circle.png');
+    background-color: #F45656;
+    width: 58vmin;
+    height: 19vw;
+    border-radius: 25px 0px 0px 0px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    transition: all 1s;
+    transform: rotate(360deg);
+}
+.card1:hover{
+    background-image: url('/circle.png');
+    background-color: #F45656;
+    
+    height: 19vw;
+    transition: all 1s;
+    border-radius: 25px 0px 0px 0px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    transform: rotate(360deg) scale(0.8);
+    box-shadow: 32px -1px 0px 45px #F45656;
+}
+.img1{
+    width: 14vw;
+    position: relative;
+    top: 32px;
+}
+.text1{
+    color: white;
+    position: absolute;
+    left: 10vw;
+    font-family: monospace;
+    font-size: 5vmin;
+}
+.card2 {
+    background-image: url('/circle2.png');
+    background-color: #F4BE56;
+    width: 58vmin;
+    background-size: cover;
+    height: 19vw;
+    border-radius: 0px 25px 0px 0px;
+    background-repeat: no-repeat;
+    transition: all 1s;
+    transform: rotate(360deg);
+}
+.cardmain{
+    border-radius: 0px 25px 0px 0px;
+    overflow: hidden;
+    width: 57vmin;
+    margin-left: 10px;
+    /* width: 58vmin; */
+}
+/* .cardmain:hover {
+    overflow: hidden;
+    border-radius: 0px 25px 0px 0px;
+} */
+.card2:hover{
+    transform: rotate(360deg) scale(1.1);
+    position: relative;
+}
+.img2{
+    width: 14vw;
+    position: relative;
+    top: 32px;
+}
+.text2{
+    color: white;
+    position: absolute;
+    left: 10.5vw;
+    font-family: monospace;
+    font-size: 4.5vmin;
+}
+
+.box2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card3 {
+    background-color: #1da1f2;
+    width: 48vmin;
+    height: 13vw;
+    border-radius: 0px 0px 0px 25px;
+    transition: all 1s;
+    transform: rotate(360deg);
+}
+.card3main{
+    overflow: hidden;
+    background-color: #1da1f2;
+    transition: all 1s;
+    margin-top: 10px;
+    height: 13vw;
+}
+.card3:hover{
+    overflow: hidden;
+    transform: rotate(345deg) scale(1.2);
+}
+.img3{
+    width: 10vw;
+    position: relative;
+    top: 56px;
+}
+.text3{
+    color: white;
+    position: absolute;
+    left: 11vw;
+    font-family: monospace;
+    font-size: 3vmin;
+}
+.card4 {
+    background-color: #a5dc86;
+    height: 13vw;
+    width: 67vmin;
+    position: relative;
+    border-radius: 0px 0px 25px 0px;
+    overflow: hidden;
+    margin: 10px;
+}
+.img4{
+    width: 50%;
+    position: relative;
+    transition: all 1s;
+}
+.img4:hover{
+    transition: all 1s;
+    transform:scale(1.2);
+}
+.text4{
+    color: white;
+    position: absolute;
+    left: 90%;
+    font-family: monospace;
+    font-size: 2vw;
+}
+.image4{
+    color: #1da1f2;
+}
