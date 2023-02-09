@@ -1,23 +1,21 @@
-.table > tbody > tr > td{
-    padding: 9px;
-}
-.mainBp {
-  background-color: white;
-  /* display: flex;
+@media only screen and (min-width: 768px) {
+  .mainBp {
+    background-color: white;
+    /* display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row; */
-}
-.box1{
+  }
+  .box1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
-}
-.card1 {
-    background-image: url('/circle.png');
-    background-color: #F45656;
+  }
+  .card1 {
+    background-image: url("/circle.png");
+    background-color: #f45656;
     width: 58vmin;
     height: 19vw;
     border-radius: 25px 0px 0px 0px;
@@ -25,34 +23,34 @@
     overflow: hidden;
     transition: all 1s;
     transform: rotate(360deg);
-}
-.card1:hover{
-    background-image: url('/circle.png');
-    background-color: #F45656;
-    
+  }
+  .card1:hover {
+    background-image: url("/circle.png");
+    background-color: #f45656;
+
     height: 19vw;
     transition: all 1s;
     border-radius: 25px 0px 0px 0px;
     background-repeat: no-repeat;
     overflow: hidden;
     transform: rotate(360deg) scale(0.8);
-    box-shadow: 32px -1px 0px 45px #F45656;
-}
-.img1{
+    box-shadow: 32px -1px 0px 45px #f45656;
+  }
+  .img1 {
     width: 14vw;
     position: relative;
     top: 32px;
-}
-.text1{
+  }
+  .text1 {
     color: white;
     position: absolute;
     left: 10vw;
     font-family: monospace;
     font-size: 5vmin;
-}
-.card2 {
-    background-image: url('/circle2.png');
-    background-color: #F4BE56;
+  }
+  .card2 {
+    background-image: url("/circle2.png");
+    background-color: #f4be56;
     width: 58vmin;
     background-size: cover;
     height: 19vw;
@@ -60,72 +58,72 @@
     background-repeat: no-repeat;
     transition: all 1s;
     transform: rotate(360deg);
-}
-.cardmain{
+  }
+  .cardmain {
     border-radius: 0px 25px 0px 0px;
     overflow: hidden;
     width: 57vmin;
     margin-left: 10px;
     /* width: 58vmin; */
-}
-/* .cardmain:hover {
+  }
+  /* .cardmain:hover {
     overflow: hidden;
     border-radius: 0px 25px 0px 0px;
 } */
-.card2:hover{
+  .card2:hover {
     transform: rotate(360deg) scale(1.1);
     position: relative;
-}
-.img2{
+  }
+  .img2 {
     width: 14vw;
     position: relative;
     top: 32px;
-}
-.text2{
+  }
+  .text2 {
     color: white;
     position: absolute;
     left: 10.5vw;
     font-family: monospace;
     font-size: 4.5vmin;
-}
+  }
 
-.box2{
+  .box2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-.card3 {
+  }
+  .card3 {
     background-color: #1da1f2;
     width: 48vmin;
     height: 13vw;
     border-radius: 0px 0px 0px 25px;
     transition: all 1s;
     transform: rotate(360deg);
-}
-.card3main{
+  }
+  .card3main {
     overflow: hidden;
     background-color: #1da1f2;
     transition: all 1s;
     margin-top: 10px;
     height: 13vw;
-}
-.card3:hover{
+  }
+  .card3:hover {
     overflow: hidden;
     transform: rotate(345deg) scale(1.2);
-}
-.img3{
+  }
+  .img3 {
     width: 10vw;
     position: relative;
     top: 56px;
-}
-.text3{
+  }
+  .text3 {
     color: white;
     position: absolute;
     left: 11vw;
     font-family: monospace;
     font-size: 3vmin;
-}
-.card4 {
+  }
+  .card4 {
     background-color: #a5dc86;
     height: 13vw;
     width: 67vmin;
@@ -133,23 +131,179 @@
     border-radius: 0px 0px 25px 0px;
     overflow: hidden;
     margin: 10px;
-}
-.img4{
+  }
+  .img4 {
     width: 50%;
     position: relative;
     transition: all 1s;
-}
-.img4:hover{
+  }
+  .img4:hover {
     transition: all 1s;
-    transform:scale(1.2);
-}
-.text4{
+    transform: scale(1.2);
+  }
+  .text4 {
     color: white;
     position: absolute;
     left: 90%;
     font-family: monospace;
     font-size: 2vw;
-}
-.image4{
+  }
+  .image4 {
     color: #1da1f2;
+  }
+}
+
+@media only screen and (max-width: 819px) {
+  .mainBp {
+    background-color: white;
+  }
+  .box1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .card1 {
+    background: transparent;
+    width: 88vmin;
+    height: 31vw;
+    border-radius: 25px 25px 0px 0px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    transition: all 1s;
+    transform: rotate(360deg);
+  }
+  .card1:hover {
+    transform: scale(0.9);
+    background: transparent;
+    width: 63vmin;
+    height: 31vw;
+  }
+  .card1main {
+    background-image: url("/circle.png");
+    background-color: #f45656;
+    width: 88vmin;
+    height: 31vw;
+    border-radius: 25px 25px 0px 0px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    transition: all 1s;
+    transform: rotate(360deg);
+  }
+  .img1 {
+    width: 22vw;
+    position: relative;
+    top: 32px;
+  }
+  .text1 {
+    color: white;
+    position: absolute;
+    left: 16vw;
+    font-family: monospace;
+    font-size: 5vmin;
+  }
+  .card2 {
+    background-image: url("/circle2.png");
+    background-color: #f4be56;
+    width: 92vmin;
+    background-size: cover;
+    height: 31vw;
+    border-radius: 0px 0px 0px 0px;
+    background-repeat: no-repeat;
+    transition: all 1s;
+    transform: rotate(360deg);
+  }
+  .cardmain {
+    border-radius: 0px 0px 0px 0px;
+    overflow: hidden;
+    width: 87.8vmin;
+    margin-top: 10px;
+    margin-left: -1px;
+  }
+  /* .cardmain:hover {
+          overflow: hidden;
+          border-radius: 0px 25px 0px 0px;
+      } */
+  .card2:hover {
+    transform: rotate(360deg) scale(1.1);
+    position: relative;
+  }
+  .img2 {
+    width: 22vw;
+    position: relative;
+    top: 22px;
+  }
+  .text2 {
+    color: white;
+    position: absolute;
+    left: 21.5vw;
+    font-family: monospace;
+    font-size: 4.5vmin;
+  }
+
+  .box2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card3 {
+    background-color: #1da1f2;
+    width: 88vmin;
+    height: 31vw;
+    border-radius: 0px 0px 0px 25px;
+    transition: all 1s;
+    transform: rotate(360deg);
+  }
+  .card3main {
+    overflow: hidden;
+    background-color: #1da1f2;
+    transition: all 1s;
+    margin-top: 10px;
+    height: 31vw;
+  }
+  .card3:hover {
+    overflow: hidden;
+    transform: rotate(345deg) scale(1.2);
+  }
+  .img3 {
+    width: 35vw;
+    position: relative;
+    /* top: 56px; */
+  }
+  .text3 {
+    color: white;
+    position: absolute;
+    left: 38vw;
+    top: 31px;
+    font-family: monospace;
+    font-size: 5vmin;
+  }
+  .card4 {
+    background-color: #a5dc86;
+    height: 31vw;
+    width: 88vmin;
+    position: relative;
+    border-radius: 0px 0px 25px 25px;
+    overflow: hidden;
+    margin: 10px;
+  }
+  .img4 {
+    width: 50%;
+    position: relative;
+    transition: all 1s;
+  }
+  .img4:hover {
+    transition: all 1s;
+    transform: scale(1.2);
+  }
+  .text4 {
+    color: white;
+    position: absolute;
+    left: 83%;
+    font-family: monospace;
+    font-size: 6vw;
+  }
+  .image4 {
+    color: #1da1f2;
+  }
 }
