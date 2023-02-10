@@ -18,11 +18,12 @@ function Nav(props) {
   const [display,setDisplay] = useState("none")
   const [isAuth,setAuth] = useState()
 
+
   const user = useUser()
   useEffect(()=>{
     setAuth(user)
   },[user])
-  
+  console.log(isAuth?.passport?.user?.first_name);
   async function getOption(){
     router.push('/auth/logout').then(() => router.reload())
   }
@@ -82,8 +83,10 @@ function Nav(props) {
 
       <div id="Dnavbar" style={{position:props.position,width:props.width,zIndex:100}} className={styles.Mnavbody}>
         <div className={styles.logo}>
-          <Image src={'/logo.svg'} alt="Logo" width={50} height={50} layout="responsive"></Image>
+            <Image src={'/logo.svg'} alt="Logo" width={50} height={50} layout="responsive"></Image>
         </div>
+      
+      
         <div className={styles.Micon}>
             <Link href={"/mycart"}>
             <a className={styles.cl}>
@@ -105,14 +108,16 @@ function Nav(props) {
         {data.length == 0 ? (<div style={{display:display}} className={styles.notfound}>Not found</div>) : data.map((product,key)=>{
             return(
               <div id="searchtitle" style={{display:display}} className={styles.searchtitle} key={key}>
-                <p>{product.title}</p>
+                <Link href={`/product/${product.slug}`}>
+                <a><p>{product.title}</p></a>
+                </Link>
               </div>
             )
         })}
         </div>
         {isAuth?.passport ? 
             <Link href={"#"}>
-              <a>Hello Fahad</a>
+              <a>Hello {isAuth?.passport?.user?.first_name}</a>
             </Link>
             :""
           }
@@ -165,9 +170,6 @@ function Nav(props) {
                 <Link href={"#"}>
                 <a onClick={()=>{getOption()}}>Log out</a>
                 </Link>
-                <Link href={"/contact"}>
-                <a>Demo</a>
-                </Link>
                 </div>
             </div>
             : <Link href={"/auth/login"}>
@@ -183,7 +185,9 @@ function Nav(props) {
         {data.length == 0 ? (<div style={{display:display}} className={styles.notfound}>Not found</div>) : data.map((product,key)=>{
             return(
               <div id="searchtitle" style={{display:display}} className={styles.searchtitle} key={key}>
-                <p>{product.title}</p>
+                <Link href={`/product/${product.slug}`}>
+                <a><p>{product.title}</p></a>
+                </Link>
               </div>
             )
         })}

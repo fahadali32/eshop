@@ -12,6 +12,7 @@ import { v4 as uuidv4 } from 'uuid';
 // import { getSession } from '../lib/auth'
 import Design from './components/cartdesign'
 import useSWR from 'swr'
+import Footer from './components/footer'
 
 export default function Home(props) {
   const [position, setPos] = useState('')
@@ -21,9 +22,12 @@ export default function Home(props) {
   const [adpd, setAdpd] = useState([])
   const [iqty, setIqty] = useState(0)
   const [loading, setLoading] = useState(false)
+  const [fooheight,setFoo] = useState()
 
   useEffect(() => {
     // getSession().then(data=> setAuth(data))
+    const fh = document.documentElement.scrollHeight-document.documentElement.offsetHeight
+    setFoo(fh)
     async function getAuth() {
       const result = await axios.get("/api/user", { withCredentials: true })
       // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -190,6 +194,7 @@ export default function Home(props) {
           </div>
           : ""}
       </div>
+      <Footer height={fooheight}/>
       {/* <footer className={styles.footer}></footer> */}
     </div>
   )

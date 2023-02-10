@@ -15,6 +15,7 @@ import { v4 as uuidv4 } from 'uuid';
 import Design from './components/cartdesign'
 import useSWR from 'swr'
 import { useRouter } from 'next/router'
+import Footer from './components/footer'
 
 function Checkout(props) {
 
@@ -25,8 +26,11 @@ function Checkout(props) {
     const [loading, setLoading] = useState(false)
     const [position, setPos] = useState('')
     const [width, setwidth] = useState('')
+    const [fooheight,setFoo] = useState()
 
     useEffect(() => {
+        const fh = document.documentElement.scrollHeight-document.documentElement.offsetHeight
+        setFoo(fh-100)
         async function getAuth() {
             const result = await axios.get("/api/user", { withCredentials: true })
             setAuth(result.data)
@@ -125,7 +129,7 @@ function Checkout(props) {
                 : ""}
 
 
-
+            <Footer height={fooheight}/>                        
         </div>
     )
 }

@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 13vw;
+    height: 20vw;
   }
   .details > h3 {
     font-size: 1rem;

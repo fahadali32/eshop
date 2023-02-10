@@ -1,4 +1,5 @@
-.formMain{
+@media only screen and (min-width: 768px) {
+  .formMain {
     display: flex;
     align-items: flex-start;
     align-content: center;
@@ -6,8 +7,8 @@
     flex-direction: row;
     padding: 50px;
     justify-content: center;
-}
-.checkForm{
+  }
+  .checkForm {
     display: flex;
     box-shadow: 0px 4px 15px 4px rgb(0 0 0 / 10%);
     justify-content: center;
@@ -17,26 +18,26 @@
     border-radius: 15px;
     padding: 20px;
     flex-direction: column;
-}
+  }
 
-.checkForm > form > table > tbody > tr > td {
+  .checkForm > form > table > tbody > tr > td {
     padding: 5px;
-}
+  }
 
-.formInput{
+  .formInput {
     width: 100%;
     font-size: 1.5vw;
     height: 4vmin;
     border-radius: 6px;
     border: 1px solid gray;
-}
-.priceBox{
+  }
+  .priceBox {
     box-shadow: 0px 4px 15px 4px rgb(0 0 0 / 10%);
     width: 20vw;
     height: 15vw;
     margin-left: 30px;
-}
-.payBtn{
+  }
+  .payBtn {
     background-color: black;
     color: white;
     padding: 5px;
@@ -45,4 +46,108 @@
     border-radius: 10px;
     font-weight: bold;
     font-size: larger;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .formMain {
+    display: flex;
+    align-items: flex-start;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 50px;
+    justify-content: center;
+  }
+  .checkForm {
+    display: flex;
+    box-shadow: 0px 4px 15px 4px rgb(0 0 0 / 10%);
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 66%;
+    height: 45vw;
+    border-radius: 15px;
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .checkForm > form > table > tbody > tr > td {
+    padding: 5px;
+  }
+
+  .formInput {
+    font-size: 1.5vw;
+    height: 6vmin;
+    border-radius: 6px;
+    border: 1px solid gray;
+    width: 100%;
+  }
+  .priceBox {
+    box-shadow: 0px 4px 15px 4px rgb(0 0 0 / 10%);
+    width: 20vw;
+    height: 15vw;
+    margin-left: 30px;
+  }
+  .payBtn {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    width: 100%;
+    height: 7.5vmin;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: larger;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .formMain {
+    display: flex;
+    align-items: flex-start;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 15px;
+    justify-content: center;
+  }
+  .checkForm {
+    display: flex;
+    box-shadow: 0px 4px 15px 4px rgb(0 0 0 / 10%);
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 91vw;
+    border-radius: 15px;
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .checkForm > form > table > tbody > tr > td {
+    padding: 5px;
+  }
+
+  .formInput {
+    font-size: 3.5vw;
+    height: 12vmin;
+    border-radius: 6px;
+    border: 1px solid gray;
+    width: 100%;
+  }
+  .priceBox {
+    box-shadow: 0px 4px 15px 4px rgb(0 0 0 / 10%);
+    width: 20vw;
+    height: 15vw;
+    margin-left: 30px;
+  }
+  .payBtn {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    width: 100%;
+    height: 13.5vmin;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: larger;
+  }
 }

@@ -14,7 +14,7 @@ passport.use(new LocalStrategy({ usernameField: 'email', passwordField: 'passwor
     return done(null, false, { info: "You are not a valid user" })
   } else {
     if (result[0]?.password == password) {
-      return done(null, { info: result[0].email })
+      return done(null, { info: result[0].email,first_name:result[0].first_name,last_name:result[0].last_name })
     } else {
       return done(null, false, { info: "Wrong email/password" })
     }
@@ -26,6 +26,7 @@ passport.use(new LocalStrategy({ usernameField: 'email', passwordField: 'passwor
 passport.serializeUser(function (user, done) {
   try {
     console.log(`from serialize ${user.info}`);
+    console.log(user);
     done(null, user);
   } catch (error) {
     done(null,user)

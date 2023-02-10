@@ -10,12 +10,14 @@ import { v4 as uuidv4 } from 'uuid';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import BarPost from './components/bp'
+import Footer from './components/footer'
 
 export default function Home(props) {
   const [position, setPos] = useState('')
   const [width, setwidth] = useState('')
   const [qty, setQty] = useState(0)
   const [pr, setPr] = useState()
+  const [fooheight,setFoo] = useState()
 
   useEffect(() => {
     window.onscroll = function () { myFunction() };
@@ -33,7 +35,7 @@ export default function Home(props) {
         setwidth('100%')
       }
     }
-
+    
     async function fetchData() {
       const pro = await axios.get(`${window.origin}/api/`, { withCredentials: true })
       // console.log(pro);
@@ -45,6 +47,12 @@ export default function Home(props) {
       setQty(total)
       // setQty(pro.data?.adpd?.length)
     }
+
+    const fh = document.documentElement.scrollHeight-document.documentElement.offsetHeight
+    console.log(fh);
+    setFoo(185)
+    
+
     fetchData()
 
   }, [])
@@ -147,10 +155,12 @@ export default function Home(props) {
           :<h1>No item found</h1>
           }
         </div>
+        <Footer height={fooheight}/>
       </div>
+      
       <ToastContainer />
 
-      <footer className={styles.footer}></footer>
+      
     </div>
   )
 }
