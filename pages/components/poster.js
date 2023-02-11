@@ -8,7 +8,6 @@ import Tilt from 'react-parallax-tilt';
 import { useEffect, useState } from 'react'
 
 function Poster() {
-  var [count, setCount] = useState(0)
   const [img, setImg] = useState()
   const [index, setIndex] = useState(0);
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -21,26 +20,26 @@ function Poster() {
   useEffect(() => {
 
     document.querySelector("#move").onmousemove = function () {
-      
+
       window.clearInterval(intervalId);
     }
     document.querySelector("#move").onmouseleave = function () {
       const intervalId = setInterval(() => {
-        
+
         setIndex((index + 1) % Object.keys(proImage).length);
       }, 5000);
-      
+
       return () => clearInterval(intervalId);
     }
-      const intervalId = setInterval(() => {
-        setIndex((index + 1) % Object.keys(proImage).length);
-      }, 5000);
-      
-      document.querySelector('#poster').style.backgroundImage = `url(${proImage[index]})`
-      return () => clearInterval(intervalId);
-      
+    const intervalId = setInterval(() => {
+      setIndex((index + 1) % Object.keys(proImage).length);
+    }, 5000);
+
+    document.querySelector('#poster').style.backgroundImage = `url(${proImage[index]})`
+    return () => clearInterval(intervalId);
+
   }, [index, proImage])
-  
+
 
   return (
     <div style={{ background: 'black' }}>

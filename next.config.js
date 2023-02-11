@@ -3,6 +3,7 @@ const nextConfig = {
   
   reactStrictMode: true,
   swcMinify: true,
+  target: 'serverless',
   images: {
     domains: [
     'static.nike.com',
