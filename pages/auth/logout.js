@@ -24,15 +24,7 @@ function Logout(props) {
 
 export async function getServerSideProps(context) {
     const { req,res } = context
-    // setCookie('token', uuidv4(), {
-    //     req, res,
-    //     httpOnly: true,
-    //     secure: process.env.NODE_ENV !== "development",
-    //     maxAge: 60 * 1000,
-    //     sameSite: "lax",
-    //     path: '/'
-    //   });
-    //   console.log('cookie set');
+    
     res.setHeader('Set-Cookie',[
         serialize('connect.sid','',{
             maxAge: -1,
