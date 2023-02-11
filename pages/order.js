@@ -16,6 +16,7 @@ import Design from './components/cartdesign'
 import useSWR from 'swr'
 import { useRouter } from 'next/router'
 import Footer from './components/footer'
+import { useUser } from '../lib/auth'
 
 function Checkout(props) {
 
@@ -28,13 +29,13 @@ function Checkout(props) {
     const [width, setwidth] = useState('')
     const [fooheight,setFoo] = useState()
 
+    const user = useUser()
     useEffect(() => {
         const fh = document.documentElement.scrollHeight-document.documentElement.offsetHeight
         setFoo(fh-100)
-        async function getAuth() {
-            const result = await axios.get("/api/user", { withCredentials: true })
-            setAuth(result.data)
-        } getAuth()
+        
+        setAuth(user)
+        
         async function fetchData() {
             const pro = await axios.get("/api/", { withCredentials: true })
             console.log(pro);
