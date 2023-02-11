@@ -15,6 +15,7 @@ import Cart from '../../models/cart'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from '../components/footer'
+import Head from 'next/head'
 
 function SLug(props) {
 
@@ -25,12 +26,12 @@ function SLug(props) {
   const [qty, setQty] = useState(0)
   const [iqty, setIqty] = useState(0)
   const [pimg, setImage] = useState(null)
-  const [fooheight,setFoo] = useState()
+  const [fooheight, setFoo] = useState()
 
   useEffect(() => {
     // console.log("props");
-    const fh = document.documentElement.scrollHeight-document.documentElement.offsetHeight
-    setFoo(fh-100)
+    const fh = document.documentElement.scrollHeight - document.documentElement.offsetHeight
+    setFoo(fh - 100)
     console.log(props);
     if (props.data) {
       setData(props.data[0])
@@ -114,11 +115,11 @@ function SLug(props) {
   async function increaseQty(data) {
     setIqty(iqty + 1)
     setQty(qty + 1)
-    
+
     console.log(data);
     const result = await axios.patch(`${window.origin}/api/cart/adPro`,
       {
-        id:data._id,
+        id: data._id,
         title: data.title,
         price: data.price,
         image: data.image,
@@ -131,7 +132,7 @@ function SLug(props) {
 
   }
   async function decreaseQty(data) {
-    
+
     console.log(iqty <= 1);
     if (iqty <= 1) {
 
@@ -198,6 +199,11 @@ function SLug(props) {
     <div>
       {isLoading ? "No Content Found" :
         <div>
+          <Head>
+            <title>{data.title}</title>
+            <meta name="description" content="E-Shop" />
+            <link rel="icon" href="/favicon.ico" />
+          </Head>
           <Nav prodata={props?.data2?.data} qty={qty} />
           <div className={styles.maintainBox}>
             <div className={styles.maincontainer}>
@@ -248,7 +254,7 @@ function SLug(props) {
 
         </div>
       }
-      <Footer height={fooheight}/>
+      <Footer height={fooheight} />
     </div>
   )
 }

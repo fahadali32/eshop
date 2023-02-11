@@ -9,7 +9,12 @@ handler.use(passport.session())
 
 
 handler.get((req, res) => {
-    res.json(req.session)
+    try {
+        res.json(req.session)
+    } catch (error) {
+        console.log(error);
+        res.json('not found')
+    }
 })
 export default handler
 
