@@ -12,6 +12,7 @@ import { v4 as uuidv4 } from 'uuid';
 // import { getSession } from '../lib/auth'
 import Design from './components/cartdesign'
 import useSWR from 'swr'
+import Footer from './components/footer'
 
 export default function Home(props) {
   const [position, setPos] = useState('')
@@ -21,11 +22,14 @@ export default function Home(props) {
   const [adpd, setAdpd] = useState([])
   const [iqty, setIqty] = useState(0)
   const [loading, setLoading] = useState(false)
+  const [fooheight,setFoo] = useState()
 
   useEffect(() => {
     // getSession().then(data=> setAuth(data))
+    const fh = document.documentElement.scrollHeight-document.documentElement.offsetHeight
+    setFoo(fh)
     async function getAuth() {
-      const result = await axios.get("/api/auth/login", { withCredentials: true })
+      const result = await axios.get("/api/user", { withCredentials: true })
       // eslint-disable-next-line react-hooks/rules-of-hooks
 
       setAuth(result.data)
@@ -70,7 +74,7 @@ export default function Home(props) {
         setIqty(iqty + 1)
         setQty(qty + 1)
         const find_res = await axios.patch(`${window.origin}/api/cart/adPro`, {
-          id:data.id,
+          id: data.id,
           title: res.title,
           price: res.price,
           image: res.image,
@@ -78,7 +82,7 @@ export default function Home(props) {
           slug: res.slug
         },
           { withCredentials: true })
-        console.log(find_res.data);
+        // console.log(find_res.data);
       }
 
     })
@@ -92,7 +96,7 @@ export default function Home(props) {
         pro.qty -= 1
         const result = await axios.patch(`${window.origin}/api/cart/adPro`,
           {
-            id:data.id,
+            id: data.id,
             title: pro.title,
             price: pro.price,
             image: pro.image,
@@ -101,7 +105,7 @@ export default function Home(props) {
           },
           { withCredentials: true }
         )
-        console.log(result.data);
+        // console.log(result.data);
       }
     })
 
@@ -113,7 +117,7 @@ export default function Home(props) {
     // console.log(data);
     adpd.map(async (pro) => {
       if (data.slug != pro.slug) {
-        console.log(adpd.length);
+        // console.log(adpd.length);
         result.push(pro)
         setQty(qty - data.qty)
       }
@@ -123,20 +127,18 @@ export default function Home(props) {
     setAdpd(result)
     // console.log(data.qty);
     const res = await axios.delete(`${window.origin}/api/cart/adPro?id=${data.id}`,
-    {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }, { withCredentials: true }
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }, { withCredentials: true }
     )
-
     console.log(res.data);
+   
     setIqty(iqty - 1)
 
   }
-
-  //console.log( isAuth?.passport ? "asi" :"nai" );
-  // console.log(adpd);
+  
   return (
     <div>
       <Head>
@@ -145,37 +147,54 @@ export default function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav prodata={props.data} qty={qty} position={position} width={width} />
-      <div className={styles.cartbd}>
-        {loading ?
-          adpd?.length != 0 ? adpd?.map((data, i) => {
-            return (
-              <div key={i}>
-                <Design
-                  id={data._id}
-                  title={data.title}
-                  slug={data.slug}
-                  image={data.image}
-                  price={data.price}
-                  qty={data.qty}
-                  increaseQty={increaseQty}
-                  decreaseQty={decreaseQty}
-                  deleteItem={deleteItem}
-                />
+      <div className={styles.cartMain}>
+        <div className={styles.cartbd}>
+          {loading ?
+            adpd?.length != 0 ? adpd?.map((data, i) => {
+              return (
+                <div key={i}>
+                  <Design
+                    id={data._id}
+                    title={data.title}
+                    slug={data.slug}
+                    image={data.image}
+                    price={data.price}
+                    qty={data.qty}
+                    increaseQty={increaseQty}
+                    decreaseQty={decreaseQty}
+                    deleteItem={deleteItem}
+                  />
+
+                </div>
+              )
+            }) : <h1>Card is empty</h1>
+            :
+            <div className={styles.loadingpanel}>
+              <div className={styles.loadingimg}></div>
+              <div>
+                <div className={styles.loadingtext}></div>
+
+                <div className={styles.loadingprice}></div>
+
               </div>
-            )
-          }) : <h1>Card is empty</h1>
-          :
-          <div className={styles.loadingpanel}>
-            <div className={styles.loadingimg}></div>
-            <div>
-              <div className={styles.loadingtext}></div>
-
-              <div className={styles.loadingprice}></div>
-
             </div>
+          }
+
+        </div>
+        <br/>
+        {adpd?.length != 0 ?
+          <div className={styles.priceBox}>
+            <h1>Your Order</h1><br/>
+            <h3>Items:{adpd.reduce((acc, curr) => { return acc + curr.price*curr.qty }, 0)}$</h3><br/>
+            <h3>Shipping:10$</h3><br/>
+            <hr></hr>
+            <h2>Total:{adpd.reduce((acc, curr) => { return acc + curr.price*curr.qty }, 0)+10}$</h2><br/>
+            <Link href={'/order'}><a><button className={styles.checkOut}>Checkout to proceed</button></a></Link>
+            
           </div>
-        }
+          : ""}
       </div>
+      <Footer height={fooheight}/>
       {/* <footer className={styles.footer}></footer> */}
     </div>
   )

@@ -7,6 +7,7 @@ import styles from '../../styles/login.module.css'
 function Login(props) {
   const [width, setwidth] = useState('')
   const [qty, setQty] = useState(0)
+  const [msg, setMsg] = useState()
 
   useEffect(() => {
 
@@ -44,6 +45,7 @@ function Login(props) {
       withCredentials: true
     }
     )
+    setMsg(result.data  )
     console.log(result.data);
     if (result.status == 200 && result.data?.isAuth) {
       router.push("/")
@@ -55,6 +57,7 @@ function Login(props) {
       <div className={styles.formCv}>
         <div className={styles.formBd}>
           <h1>Login</h1>
+          {msg?.info ? <p className={styles.warn}>{msg?.info}</p>: ""}
           <form onSubmit={(e) => { submitForm(e) }}>
             <input type="email" name="email" className={styles.inputData} placeholder="Input your email" required />
             <br />
@@ -63,7 +66,7 @@ function Login(props) {
             <input className={styles.sbbtn} type="submit" value="Log in" />
           </form>
         </div>
-        
+
       </div>
     </div>
   )

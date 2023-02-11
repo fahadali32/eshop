@@ -1,22 +1,23 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import axios from 'axios'
 import Cart from './components/cart'
 import Nav from './nav'
-import Link from 'next/link'
 import Poster from './components/poster'
 import { useEffect, useState } from 'react'
-import { getCookies, getCookie, setCookie, deleteCookie } from 'cookies-next';
+import { getCookie, setCookie } from 'cookies-next';
 import { v4 as uuidv4 } from 'uuid';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import BarPost from './components/bp'
+import Footer from './components/footer'
 
 export default function Home(props) {
   const [position, setPos] = useState('')
   const [width, setwidth] = useState('')
   const [qty, setQty] = useState(0)
   const [pr, setPr] = useState()
+  const [fooheight,setFoo] = useState()
 
   useEffect(() => {
     window.onscroll = function () { myFunction() };
@@ -34,7 +35,7 @@ export default function Home(props) {
         setwidth('100%')
       }
     }
-
+    
     async function fetchData() {
       const pro = await axios.get(`${window.origin}/api/`, { withCredentials: true })
       // console.log(pro);
@@ -46,6 +47,12 @@ export default function Home(props) {
       setQty(total)
       // setQty(pro.data?.adpd?.length)
     }
+
+    const fh = document.documentElement.scrollHeight-document.documentElement.offsetHeight
+    console.log(fh);
+    setFoo(185)
+    
+
     fetchData()
 
   }, [])
@@ -87,11 +94,12 @@ export default function Home(props) {
         theme: "light",
       });
     }
-    console.log(props);
+    // console.log(props);
     // alert("hello ")
   }
 
   let data = props.data ? props.data : null;
+  let pro_items = props.pro_items ? props.pro_items : null;
   return (
     <div>
       <Head>
@@ -117,14 +125,42 @@ export default function Home(props) {
                 />
               </div>
             )
-          }) :
+          })
+          
+          
+          :
             <h1>No item found</h1>
           }
+          
         </div>
+        <br/><br/><br/>
+        <BarPost/>
+        <br/><br/>
+        <div className={styles.cartBody2}>
+        {pro_items != null ? pro_items.map((product, key) => {
+            return (
+              <div key={key}>
+                <Cart
+                  id={key}
+                  pid={product.id}
+                  title={product.title}
+                  price={product.price}
+                  image={product.image}
+                  link={product.slug}
+                  addtoCart={addtoCart}
+                />
+              </div>
+            )
+          })
+          :<h1>No item found</h1>
+          }
+        </div>
+        <Footer height={fooheight}/>
       </div>
+      
       <ToastContainer />
 
-      <footer className={styles.footer}></footer>
+      
     </div>
   )
 }
@@ -158,6 +194,7 @@ export async function getServerSideProps({ req, res }) {
     return {
       props: {
         data: data.data,
+        pro_items:data.pro_items,
         adpd: data.adpd
       }
     }

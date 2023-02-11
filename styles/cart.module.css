@@ -1,162 +1,289 @@
 /* For mobile view only */
-@media only screen and (max-width:768px){
-    .panel{
-        color: black;
-        width: 85vw;
-        box-shadow: 0px 4px 15px 4px rgb(0 0 0 / 10%);
-        padding: 10px;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 17vw;
+@media only screen and (max-width: 768px) {
+  .panel {
+    color: black;
+    width: 85vw;
+    box-shadow: 0px 4px 15px 4px rgb(0 0 0 / 10%);
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 20vw;
+  }
+  .details > h3 {
+    font-size: 1rem;
+    width: 100px;
+  }
+  .btnbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .btn {
+    background-color: black;
+    color: white;
+    border: none;
+    width: auto;
+    height: auto;
+    padding: 5px;
+    font-size: 13px;
+    text-align: center;
+  }
+  .qty {
+    margin: 5px;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .imagebox {
+    width: 13vw;
+    /* height: 30vw; */
+  }
+  .cartMain {
+    display: flex;
+    padding: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .cartbd {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* .cartbd {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  } */
+  .trash {
+    border: none;
+    font-size: 21px;
+    background-color: transparent;
+    margin-top: 5px;
+  }
+  .checkOut {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    font-weight: bold;
+    font-size: medium;
+    height: 43px;
+    border-radius: 6px;
+    width: 100%;
+  }
+  .checkOut:hover {
+    color: black;
+    background-color: white;
+    padding: 10px;
+    font-weight: bold;
+    font-size: medium;
+    height: 43px;
+    border-radius: 6px;
+    width: 100%;
+  }
+  .checkOut:hover {
+    animation: btnchek 1s linear;
+  }
+  @keyframes btnchek {
+    from {
+      opacity: 0;
     }
-    .details > h3{
-        font-size: 1rem;
-        width: 100px;
+    to {
+      opacity: 1;
     }
-    .btnbox{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        flex-wrap: nowrap;
-        justify-content: center;
-    }
-    .btn{
-        background-color: black;
-        color: white;
-        border: none;
-        width: auto;
-        height: auto;
-        padding: 5px;
-        font-size: 13px;
-        text-align: center;
-    }
-    .qty{
-        margin: 5px;
-        font-weight: bold;
-        font-size: 25px;
-    }
-    .imagebox{
-        width: 13vw;
-        /* height: 30vw; */
-    }
-    .cartbd{
-        padding: 15px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .trash{
-        border: none;
-        font-size: 21px;
-        background-color: transparent;
-        margin-top: 5px;
-    }
+  }
+  .priceBox{
+    width: 83%;
+    height: 278px;
+    background: white;
+    padding: 30px;
+    margin-top: 5vw;
+    box-shadow: 0px 0px 7px 6px #b6b4b438;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: stretch;
+    justify-content: center;
+  }
 }
 
 /* For desktop view only */
 @media only screen and (min-width: 768px) {
+  .panel {
+    color: black;
+    width: 100%;
+    box-shadow: 0px 4px 15px 4px rgb(0 0 0 / 10%);
+    padding: 23px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .btnbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .btn {
+    background-color: black;
+    color: white;
+    border: none;
+    width: 2.3vmax;
+    height: 2.3vmax;
+    font-size: 1.3vw;
+    padding: 6px;
+  }
+  .qty {
+    margin: 10px;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .imagebox {
+    width: 5vw;
+    /* height: 30vw; */
+  }
+  .details {
+    width: 155px;
+  }
+  .cartMain {
+    display: flex;
+    padding-top: 100px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: center;
+  }
+  .cartbd {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .trash {
+    border: none;
+    font-size: 28px;
+    background-color: transparent;
+    margin-top: 5px;
+  }
+  .loadingpanel {
+    color: black;
+    width: 50vw;
+    box-shadow: 0px 4px 15px 4px rgb(0 0 0 / 10%);
+    padding: 23px;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .loadingpanel > div {
+    margin: 5px;
+  }
+  .loadingimg {
+    width: 6vw;
+    background-color: rgb(0, 0, 0, 0.25);
+    height: 6vw;
+    animation-name: loading;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+  }
+  .loadingtext {
+    width: 20vw;
+    height: 20px;
+    background-color: rgb(0, 0, 0, 0.25);
+    animation-name: loading;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+  }
+  .loadingprice {
+    margin-top: 10px;
+    width: 25%;
+    height: 20px;
+    background-color: rgb(0, 0, 0, 0.25);
+    animation-name: loading;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+  }
+  @keyframes loading {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  .checkOut {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    font-weight: bold;
+    font-size: larger;
+    height: 6vmin;
+    border-radius: 6px;
+    width: 100%;
+  }
+  .checkOut:hover {
+    color: black;
+    background-color: white;
+    padding: 10px;
+    font-weight: bold;
+    font-size: larger;
+    height: 6vmin;
+    width: 100%;
+    border-radius: 6px;
+  }
+  .checkOut:hover {
+    animation: btnchek 1s linear;
+  }
+  @keyframes btnchek {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .priceBox {
+    width: 350px;
+    height: 278px;
+    background: white;
+    padding: 30px;
+    margin-left: 6vw;
+    /* margin-top: 30px; */
+    box-shadow: 0px 0px 7px 6px #b6b4b438;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: stretch;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width : 768px) {
     .panel{
-        color: black;
-        width: 50vw;
-        box-shadow: 0px 4px 15px 4px rgb(0 0 0 / 10%);
-        padding: 23px;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
+        height: 9vmin;
     }
-    .btnbox{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        flex-wrap: nowrap;
-        justify-content: center;
-    }
-    .btn{
-        background-color: black;
-        color: white;
-        border: none;
-        width: 2.3vmax;
-        height: 2.3vmax;
-        font-size: 1.3vw;
-        padding: 6px;
-    }
-    .qty{
-        margin: 10px;
-        font-weight: bold;
-        font-size: 25px;
-    }
-    .imagebox{
-        width: 5vw;
-        /* height: 30vw; */
-    }
-    .details{
-        width: 155px;
+    .priceBox{
+        margin-top: 20px;
     }
     .cartbd{
-        padding: 100px;
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
-    }
-    .trash{
-        border: none;
-        font-size: 28px;
-        background-color: transparent;
-        margin-top: 5px;
-    }
-    .loadingpanel{
-        color: black;
-        width: 50vw;
-        box-shadow: 0px 4px 15px 4px rgb(0 0 0 / 10%);
-        padding: 23px;
-        border-radius: 5px;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-    }
-    .loadingpanel > div{
-        margin:5px;
-    }
-    .loadingimg{
-        width: 6vw;
-        background-color: rgb(0 ,0 ,0 ,0.25);
-        height: 6vw;
-        animation-name: loading;
-        animation-duration: 2000ms;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        animation-timing-function: ease-in-out;
-    }
-    .loadingtext{
-        width: 20vw;
-        height: 20px;
-        background-color: rgb(0 ,0 ,0 ,0.25);
-        animation-name: loading;
-        animation-duration: 2000ms;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        animation-timing-function: ease-in-out;
-    }
-    .loadingprice{
-        margin-top: 10px;
-        width: 25%;
-        height: 20px;
-        background-color: rgb(0 ,0 ,0 ,0.25);
-        animation-name: loading;
-        animation-duration: 2000ms;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        animation-timing-function: ease-in-out;
-    }
-    @keyframes loading {
-        from{
-            opacity: 1;
-        }to{
-            opacity: 0;
-        }
+        margin-top: 20px;
     }
 }

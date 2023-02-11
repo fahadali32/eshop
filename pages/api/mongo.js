@@ -5,6 +5,7 @@ mongoose.set('strictQuery', false);
 // console.log(process.env.UNAME,process.env.PASS);
 mongoose.connect(
   `mongodb+srv://${process.env.UNAME}:${process.env.PASS}@cluster0.ugi7clf.mongodb.net/Shop?retryWrites=true&w=majority`,
+  // 'mongodb://localhost:27017/Shop',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true

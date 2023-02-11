@@ -20,6 +20,7 @@ const handler = nc({
   
   const store = new MongoDBStore({
     uri: `mongodb+srv://${process.env.UNAME}:${process.env.PASS}@cluster0.ugi7clf.mongodb.net/session?retryWrites=true&w=majority`,
+    // uri:  'mongodb://localhost:27017/',
     collection: 'mySessions'
   });
   
@@ -42,6 +43,7 @@ const handler = nc({
     cookie: { secure : false, maxAge: 60 * 60 * 1000 },
     store 
   }))
+
 
 export default handler;
 

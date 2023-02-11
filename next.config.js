@@ -3,6 +3,7 @@ const nextConfig = {
   
   reactStrictMode: true,
   swcMinify: true,
+  target: 'serverless',
   images: {
     domains: [
     'static.nike.com',
@@ -10,6 +11,7 @@ const nextConfig = {
     'images.puma.com',
     'rukminim1.flixcart.com',
     'avatars.dicebear.com',
+    'jevelin.shufflehound.com'
     ],
   },
 }

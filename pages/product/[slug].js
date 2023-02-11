@@ -14,6 +14,7 @@ import proImg from '../../models/proimg'
 import Cart from '../../models/cart'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Footer from '../components/footer'
 
 function SLug(props) {
 
@@ -24,10 +25,12 @@ function SLug(props) {
   const [qty, setQty] = useState(0)
   const [iqty, setIqty] = useState(0)
   const [pimg, setImage] = useState(null)
-
+  const [fooheight,setFoo] = useState()
 
   useEffect(() => {
     // console.log("props");
+    const fh = document.documentElement.scrollHeight-document.documentElement.offsetHeight
+    setFoo(fh-100)
     console.log(props);
     if (props.data) {
       setData(props.data[0])
@@ -245,6 +248,7 @@ function SLug(props) {
 
         </div>
       }
+      <Footer height={fooheight}/>
     </div>
   )
 }
