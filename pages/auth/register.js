@@ -3,10 +3,13 @@ import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
 import Nav from '../nav';
 import styles from '../../styles/login.module.css'
+import { CgSpinner } from 'react-icons/cg';
 
 function Register(props) {
   const [width, setwidth] = useState('')
   const [qty, setQty] = useState(0)
+  const [display,setDisplay] = useState()
+  const [sdisplay,setsDisplay] = useState()
 
   useEffect(() => {
 
@@ -59,6 +62,9 @@ function Register(props) {
     } else {
       console.log(result.data);
     }
+
+    setDisplay("none")
+    setsDisplay("block")
   }
   return (
     <div>
@@ -78,6 +84,7 @@ function Register(props) {
             <input type="password" className={styles.inputData} name="password" placeholder="Input your password" required />
             <br />
             <input type="submit" className={styles.sbbtn} value="Submit" />
+            <button id="logAfter" style={{display:msg?.info ? "": sdisplay}} className={styles.ansbbtn} type="button"><CgSpinner className={styles.anispi}/></button> 
           </form>
         </div>
       </div>

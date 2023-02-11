@@ -3,11 +3,16 @@ import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
 import Nav from '../nav';
 import styles from '../../styles/login.module.css'
+import Head from 'next/head';
+import Link from 'next/link';
+import { CgSpinner } from 'react-icons/cg';
 
 function Login(props) {
   const [width, setwidth] = useState('')
   const [qty, setQty] = useState(0)
   const [msg, setMsg] = useState()
+  const [display,setDisplay] = useState()
+  const [sdisplay,setsDisplay] = useState()
 
   useEffect(() => {
 
@@ -50,10 +55,18 @@ function Login(props) {
     if (result.status == 200 && result.data?.isAuth) {
       router.push("/")
     }
+    setDisplay("none")
+    setsDisplay("block")
+
   }
   return (
     <div>
       <Nav prodata={props.data} qty={qty} width={width} />
+      <Head>
+        <title>E-Shop-login</title>
+        <meta name="description" content="E-Shop" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className={styles.formCv}>
         <div className={styles.formBd}>
           <h1>Login</h1>
@@ -63,8 +76,11 @@ function Login(props) {
             <br />
             <input type="password" name="password" className={styles.inputData} placeholder="Input your password" required />
             <br />
-            <input className={styles.sbbtn} type="submit" value="Log in" />
+            <input id="logBefore" style={{display:msg?.info ? "": display}} className={styles.sbbtn} type="submit" value="Log in" />
+            <button id="logAfter" style={{display:msg?.info ? "": sdisplay}} className={styles.ansbbtn} type="button"><CgSpinner className={styles.anispi}/></button> 
           </form>
+          <br/>
+          <p>Dont havent account <Link href={"/auth/register"}><a><u>Register here</u></a></Link></p> 
         </div>
 
       </div>

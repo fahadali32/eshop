@@ -67,6 +67,31 @@
     background-color: transparent;
     margin-top: 5px;
   }
+  .scheckOut{
+    color: black;
+    background-color: white;
+    padding: 10px;
+    font-weight: bold;
+    font-size: medium;
+    height: 43px;
+    border-radius: 6px;
+    width: 100%;
+    display: none;
+  }
+  .anispi{
+    animation: animi 3s infinite;
+    color: black;
+    font-size: 23px;
+    /* animation-timing-function: linear; */
+  }
+  @keyframes animi {
+    fonm {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  } 
   .checkOut {
     color: white;
     background-color: black;
@@ -98,6 +123,7 @@
       opacity: 1;
     }
   }
+  
   .priceBox{
     width: 83%;
     height: 278px;
@@ -226,6 +252,31 @@
       opacity: 0;
     }
   }
+  .scheckOut{
+    color: black;
+    background-color: white;
+    padding: 10px;
+    font-weight: bold;
+    font-size: larger;
+    height: 6vmin;
+    border-radius: 6px;
+    width: 100%;
+    display: none;
+  }
+  .anispi{
+    animation: animi 3s infinite;
+    color: black;
+    font-size: 3.5vmin;
+    /* animation-timing-function: linear; */
+  }
+  @keyframes animi {
+    fonm {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  } 
   .checkOut {
     color: white;
     background-color: black;

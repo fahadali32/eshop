@@ -25,6 +25,31 @@
   padding: 10px;
   border-radius: 11px;
   margin-top: 14px;
+  width: 90%;
+}
+.ansbbtn {
+  /* padding: 10px; */
+  display: none;
+  width: 100%;
+  background: black;
+  color: white;
+  font-weight: bold;
+  border-radius: 11px;
+  margin-top: 14px;
+}
+.anispi {
+  animation: animi 3s infinite;
+  color: white;
+  font-size: 28px;
+  padding: 2px;
+}
+@keyframes animi {
+  fonm {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .sbbtn {
   padding: 10px;
@@ -35,7 +60,7 @@
   border-radius: 11px;
   margin-top: 14px;
 }
-.warn{
+.warn {
   background-color: rgb(251, 136, 136);
   padding: 10px;
   border-radius: 10px;

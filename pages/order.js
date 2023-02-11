@@ -27,15 +27,15 @@ function Checkout(props) {
     const [loading, setLoading] = useState(false)
     const [position, setPos] = useState('')
     const [width, setwidth] = useState('')
-    const [fooheight,setFoo] = useState()
+    const [fooheight, setFoo] = useState()
 
     const user = useUser()
     useEffect(() => {
-        const fh = document.documentElement.scrollHeight-document.documentElement.offsetHeight
-        setFoo(fh-100)
-        
+        const fh = document.documentElement.scrollHeight - document.documentElement.offsetHeight
+        setFoo(fh - 100)
+
         setAuth(user)
-        
+
         async function fetchData() {
             const pro = await axios.get("/api/", { withCredentials: true })
             console.log(pro);
@@ -80,13 +80,18 @@ function Checkout(props) {
         if (data.status == 200) {
             router.push('/')
         }
-        
+
     }
 
     // console.log(isAuth?.passport?.user ? "ase" : "nai");
     return (
         <div>
             <Nav prodata={props.data} qty={qty} position={position} width={width} />
+            <Head>
+                <title>Order Complete</title>
+                <meta name="description" content="E-Shop" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             {loading ?
 
                 isAuth?.passport?.user && adpd.length != 0 ?
@@ -123,14 +128,14 @@ function Checkout(props) {
                     </div>
                     :
                     <div>
-                        <h3>You havent logged in yet.<Link href={'/auth/login'}><a style={{}}>Login</a></Link> First</h3>
+                        <h3 style={{textAlign:"center",marginTop:"30px"}}>You havent logged in yet.<Link href={'/auth/login'}><a style={{}}><u style={{color:"white",background:"black"}}>Login</u></a></Link> First</h3>
                     </div>
 
 
                 : ""}
 
 
-            <Footer height={fooheight}/>                        
+            <Footer height={fooheight} />
         </div>
     )
 }

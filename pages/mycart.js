@@ -13,6 +13,7 @@ import { v4 as uuidv4 } from 'uuid';
 import Design from './components/cartdesign'
 import useSWR from 'swr'
 import Footer from './components/footer'
+import { CgSpinner } from 'react-icons/cg';
 
 export default function Home(props) {
   const [position, setPos] = useState('')
@@ -23,6 +24,8 @@ export default function Home(props) {
   const [iqty, setIqty] = useState(0)
   const [loading, setLoading] = useState(false)
   const [fooheight,setFoo] = useState()
+  const [display,setDisplay] = useState()
+  const [sdisplay,setsDisplay] = useState()
 
   useEffect(() => {
     // getSession().then(data=> setAuth(data))
@@ -139,6 +142,11 @@ export default function Home(props) {
 
   }
   
+  function btnClicked(){
+    setsDisplay("block")
+    setDisplay("none")
+  }
+
   return (
     <div>
       <Head>
@@ -189,8 +197,8 @@ export default function Home(props) {
             <h3>Shipping:10$</h3><br/>
             <hr></hr>
             <h2>Total:{adpd.reduce((acc, curr) => { return acc + curr.price*curr.qty }, 0)+10}$</h2><br/>
-            <Link href={'/order'}><a><button className={styles.checkOut}>Checkout to proceed</button></a></Link>
-            
+            <Link href={'/order'}><a><button onClick={()=>{ btnClicked() }} style={{display:display}} className={styles.checkOut}>Checkout to proceed</button></a></Link>
+            <Link href={'/order'}><a><button onClick={()=>{ btnClicked() }} style={{display:sdisplay}} className={styles.scheckOut}><CgSpinner className={styles.anispi} /></button></a></Link>
           </div>
           : ""}
       </div>
