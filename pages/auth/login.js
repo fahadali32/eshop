@@ -66,6 +66,7 @@ function Login(props) {
         <title>E-Shop-login</title>
         <meta name="description" content="E-Shop" />
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:image" content="/image.svg"/>
       </Head>
       <div className={styles.formCv}>
         <div className={styles.formBd}>
