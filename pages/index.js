@@ -94,7 +94,7 @@ export default function Home(props) {
         theme: "light",
       });
     }
-    console.log(props);
+    // console.log(props);
     // alert("hello ")
   }
 

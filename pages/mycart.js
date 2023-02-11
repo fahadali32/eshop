@@ -133,8 +133,8 @@ export default function Home(props) {
         },
       }, { withCredentials: true }
     )
-
-    // console.log(res.data);
+    console.log(res.data);
+   
     setIqty(iqty - 1)
 
   }
