@@ -153,7 +153,7 @@ export default function Home(props) {
         <title>E-Shop</title>
         <meta name="description" content="E-Shop" />
         <link rel="icon" href="/favicon.ico" />
-        <meta property="og:image" content="/image.svg"/>
+        <meta property="og:image" content="/image.png"/>
       </Head>
       <Nav prodata={props.data} qty={qty} position={position} width={width} />
       <div className={styles.cartMain}>

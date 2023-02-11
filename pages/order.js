@@ -91,7 +91,7 @@ function Checkout(props) {
                 <title>Order Complete</title>
                 <meta name="description" content="E-Shop" />
                 <link rel="icon" href="/favicon.ico" />
-                <meta property="og:image" content="/image.svg"/>
+                <meta property="og:image" content="/image.png"/>
             </Head>
             {loading ?
 
