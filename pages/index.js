@@ -11,6 +11,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import BarPost from './components/bp'
 import Footer from './components/footer'
+import Header from './components/header'
 
 export default function Home(props) {
   const [position, setPos] = useState('')
@@ -102,12 +103,7 @@ export default function Home(props) {
   let pro_items = props.pro_items ? props.pro_items : null;
   return (
     <div>
-      <Head>
-        <title>E-Shop</title>
-        <meta name="description" content="E-Shop" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta property="og:image" content="/image.png"/>
-      </Head>
+      <Header title={"E-Shop"}/>
       <Nav prodata={props.data} qty={qty} position={position} width={width} />
       <Poster />
       <div id='main' className={styles.main}>

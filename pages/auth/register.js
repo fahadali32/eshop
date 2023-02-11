@@ -5,6 +5,7 @@ import Nav from '../nav';
 import styles from '../../styles/login.module.css'
 import { CgSpinner } from 'react-icons/cg';
 import Head from 'next/head';
+import Header from '../components/header';
 
 function Register(props) {
   const [width, setwidth] = useState('')
@@ -70,12 +71,8 @@ function Register(props) {
   return (
     <div>
       <Nav prodata={props.data} qty={qty} width={width} />
-      <Head>
-        <title>E-Shop-login</title>
-        <meta name="description" content="E-Shop" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta property="og:image" content="/image.png"/>
-      </Head>
+      <Header title={"E-Shop-login"} />
+      
       
       <div className={styles.formCv}>
         <div className={styles.formBd}>

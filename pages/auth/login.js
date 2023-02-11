@@ -6,6 +6,7 @@ import styles from '../../styles/login.module.css'
 import Head from 'next/head';
 import Link from 'next/link';
 import { CgSpinner } from 'react-icons/cg';
+import Header from '../components/header';
 
 function Login(props) {
   const [width, setwidth] = useState('')
@@ -62,12 +63,8 @@ function Login(props) {
   return (
     <div>
       <Nav prodata={props.data} qty={qty} width={width} />
-      <Head>
-        <title>E-Shop-login</title>
-        <meta name="description" content="E-Shop" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta property="og:image" content="/image.png"/>
-      </Head>
+      <Header title={"E-Shop-login"} />
+      
       <div className={styles.formCv}>
         <div className={styles.formBd}>
           <h1>Login</h1>

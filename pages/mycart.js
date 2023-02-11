@@ -14,6 +14,7 @@ import Design from './components/cartdesign'
 import useSWR from 'swr'
 import Footer from './components/footer'
 import { CgSpinner } from 'react-icons/cg';
+import Header from './components/header'
 
 export default function Home(props) {
   const [position, setPos] = useState('')
@@ -149,12 +150,8 @@ export default function Home(props) {
 
   return (
     <div>
-      <Head>
-        <title>E-Shop</title>
-        <meta name="description" content="E-Shop" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta property="og:image" content="/image.png"/>
-      </Head>
+      <Header title={"E-Shop"}/>
+      
       <Nav prodata={props.data} qty={qty} position={position} width={width} />
       <div className={styles.cartMain}>
         <div className={styles.cartbd}>

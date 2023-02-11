@@ -17,6 +17,7 @@ import useSWR from 'swr'
 import { useRouter } from 'next/router'
 import Footer from './components/footer'
 import { useUser } from '../lib/auth'
+import Header from './components/header'
 
 function Checkout(props) {
 
@@ -87,12 +88,8 @@ function Checkout(props) {
     return (
         <div>
             <Nav prodata={props.data} qty={qty} position={position} width={width} />
-            <Head>
-                <title>Order Complete</title>
-                <meta name="description" content="E-Shop" />
-                <link rel="icon" href="/favicon.ico" />
-                <meta property="og:image" content="/image.png"/>
-            </Head>
+            <Header title={"E-Shop Order Complete"}/>
+            
             {loading ?
 
                 isAuth?.passport?.user && adpd.length != 0 ?

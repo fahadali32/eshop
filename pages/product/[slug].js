@@ -16,6 +16,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from '../components/footer'
 import Head from 'next/head'
+import Header from '../components/header'
 
 function SLug(props) {
 
@@ -199,11 +200,7 @@ function SLug(props) {
     <div>
       {isLoading ? "No Content Found" :
         <div>
-          <Head>
-            <title>{data.title}</title>
-            <meta name="description" content="E-Shop" />
-            <link rel="icon" href="/favicon.ico" />
-          </Head>
+          <Header title={data.title}/>
           <Nav prodata={props?.data2?.data} qty={qty} />
           <div className={styles.maintainBox}>
             <div className={styles.maincontainer}>
