@@ -12,6 +12,7 @@ function Register(props) {
   const [qty, setQty] = useState(0)
   const [display,setDisplay] = useState()
   const [sdisplay,setsDisplay] = useState()
+  const [msg, setMsg] = useState()
 
   useEffect(() => {
 
@@ -57,6 +58,7 @@ function Register(props) {
       withCredentials: true
     }
     )
+    setMsg(result.data  )
     // console.log(result);
     if (result.status == 200 && result.data?.isAuth) {
       router.push('/')
@@ -71,12 +73,13 @@ function Register(props) {
   return (
     <div>
       <Nav prodata={props.data} qty={qty} width={width} />
-      <Header title={"E-Shop-login"} />
+      <Header title={"E-Shop-register"} />
       
       
       <div className={styles.formCv}>
         <div className={styles.formBd}>
           <h1>Register</h1>
+          {msg?.info ? <p className={styles.warn}>{msg?.info}</p>: ""}
           <form onSubmit={(e) => { submitForm(e) }}>
             <input type="name" className={styles.inputData} name="username" placeholder="Input your username" required />
             <br />
@@ -88,7 +91,7 @@ function Register(props) {
             <br />
             <input type="password" className={styles.inputData} name="password" placeholder="Input your password" required />
             <br />
-            <input type="submit" className={styles.sbbtn} value="Submit" />
+            <input type="submit" style={{display:msg?.info ? "": display}} className={styles.sbbtn} value="Submit" />
             <button id="logAfter" style={{display:msg?.info ? "": sdisplay}} className={styles.ansbbtn} type="button"><CgSpinner className={styles.anispi}/></button> 
           </form>
         </div>

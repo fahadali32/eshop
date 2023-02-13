@@ -34,9 +34,9 @@ handler.post(async (req, res,next) => {
     const userName = await Auth.findOne({ username: username })
 
     if (emailFind) {
-        res.status(200).json("This email is already used")
+        res.status(200).json({info:"This email is already used"})
     } else if (userName) {
-        res.status(200).json("This username is already used")
+        res.status(200).json({info:"This username is already used"})
     } else {
         try {
             const data = new Auth({
@@ -75,7 +75,7 @@ handler.post(async (req, res,next) => {
                     });
 
             })(req, res, next);
-            
+            // res.status(200).json("hello ")
 
         } catch (error) {
             
