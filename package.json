@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@dicebear/avatars": "^4.10.5",
+    "@dicebear/avatars": "^4.10.8",
     "@dicebear/avatars-initials-sprites": "^4.10.5",
     "@netlify/plugin-nextjs": "^4.30.4",
     "@react-icons/all-files": "^4.1.0",
