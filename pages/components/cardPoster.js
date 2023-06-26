@@ -10,64 +10,74 @@ function Cardposter() {
       <br />
       <div className={styles.mainDiv}>
         <div>
-          <div className={styles.imagebox}>
-            <Image
-              src={"/man.png"}
-              className={styles.image}
-              width={100}
-              height={100}
-              layout={"responsive"}
-              objectFit="contain"
-              property="priority"
-              alt={"man"}
-            ></Image>
+          <div className={styles.div1}>
+            <div className={styles.imagebox}>
+              <Image
+                src={"/man.png"}
+                className={styles.image}
+                width={100}
+                height={100}
+                layout={"responsive"}
+                objectFit="contain"
+                property="priority"
+                alt={"man"}
+              ></Image>
+            </div>
+            <h3 className={styles.cardTxt}>Mens Style</h3>
           </div>
-          <h3 className={styles.cardTxt}>Mens Style</h3>
         </div>
         <div>
-          <div className={styles.imagebox}>
-            <Image
-              src={"/girl.png"}
-              className={styles.image}
-              width={100}
-              height={100}
-              layout={"responsive"}
-              objectFit="contain"
-              property="priority"
-              alt={"man"}
-            ></Image>
+          <div className={styles.div2}>
+            <div className={styles.imagebox}>
+              <Image
+                src={"/girl.png"}
+                className={styles.image}
+                width={100}
+                height={100}
+                layout={"responsive"}
+                objectFit="contain"
+                property="priority"
+                alt={"man"}
+              ></Image>
+            </div>
+            <h3 className={styles.cardTxt}>Womens Style</h3>
           </div>
-          <h3 className={styles.cardTxt}>Womens Style</h3>
         </div>
+
         <div>
-          <div className={styles.imagebox}>
-            <Image
-              src={"/shoe.png"}
-              className={styles.image}
-              width={100}
-              height={100}
-              layout={"responsive"}
-              objectFit="contain"
-              property="priority"
-              alt={"man"}
-            ></Image>
+          <div className={styles.div3}>
+            <div className={styles.imagebox}>
+              <Image
+                src={"/shoe.png"}
+                className={styles.image}
+                width={100}
+                height={100}
+                layout={"responsive"}
+                objectFit="contain"
+                property="priority"
+                alt={"man"}
+              ></Image>
+            </div>
+            <h3 className={styles.cardTxt}>Shoes Collection</h3>
           </div>
-          <h3 className={styles.cardTxt}>Shoes Collection</h3>
         </div>
+        
         <div>
-          <div className={styles.imagebox}>
-            <Image
-              src={"/family.png"}
-              className={styles.image}
-              width={100}
-              height={100}
-              layout={"responsive"}
-              objectFit="contain"
-              property="priority"
-              alt={"man"}
-            ></Image>
+          <div className={styles.div4}>
+            <div className={styles.imagebox}>
+              <Image
+                src={"/family.png"}
+                className={styles.image}
+                width={100}
+                height={100}
+                layout={"responsive"}
+                objectFit="contain"
+                property="priority"
+                alt={"man"}
+              ></Image>
+            </div>
+            <h3 className={styles.cardTxt}>Family Collection</h3>
           </div>
-          <h3 className={styles.cardTxt}>Family Collection</h3>
         </div>
       </div>
     </div>

@@ -448,6 +448,7 @@ justify-content: space-between; */
         padding-top: 6vw;
         justify-content: center;
         align-items: center;
+        gap: 20px;
     }
     .cartBody > div{
         margin: 0px;

@@ -112,6 +112,7 @@ export default function Home(props) {
       <Nav prodata={props.data} qty={qty} position={position} width={width} />
       <Poster />
       <div id="main" className={styles.main}>
+        <br/><br/>
         <div className={styles.cartBody}>
           {data != null ? (
             data.map((product, key) => {
