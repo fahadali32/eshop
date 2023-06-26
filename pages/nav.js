@@ -272,7 +272,7 @@ function Nav(props) {
             </div>
           ) : (
             data.map((product, key) => {
-              console.log(product);
+              
               return (
                 <div
                   id="searchtitle"

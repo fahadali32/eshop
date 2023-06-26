@@ -30,7 +30,9 @@ function Login(props) {
   }, []);
 
   const router = useRouter();
-
+  setTimeout(() => {
+    setCheck(false)
+  }, 1000);
   async function submitForm(e) {
     e.preventDefault();
     setCheck(true)

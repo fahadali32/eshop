@@ -12,6 +12,7 @@ import { v4 as uuidv4 } from "uuid";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Cardposter from "./components/cardPoster";
+import Footer from "./components/footer";
 
 export default function Home(props) {
   const [position, setPos] = useState("");
@@ -159,10 +160,15 @@ export default function Home(props) {
             )}
           </div>
         </div>
+        <br/><br/><br/>
+        <Footer/>
       </div>
+      
       <ToastContainer />
 
-      <footer className={styles.footer}></footer>
+      <footer className={styles.footer}>
+        
+      </footer>
     </div>
   );
 }

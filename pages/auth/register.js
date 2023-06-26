@@ -30,6 +30,9 @@ function Register(props) {
   const router = useRouter();
   //console.log(props);
   //console.log(`${window.origin}/api/auth/login`);
+  setTimeout(() => {
+    setCheck(false)
+  }, 1000);
   async function submitForm(e) {
     e.preventDefault();
     setCheck(true)
