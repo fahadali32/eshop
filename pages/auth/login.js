@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
 import Nav from '../nav';
 import styles from '../../styles/login.module.css'
+import Link from 'next/link';
 
 function Login(props) {
   const [width, setwidth] = useState('')
@@ -62,6 +63,7 @@ function Login(props) {
             <br />
             <input className={styles.sbbtn} type="submit" value="Log in" />
           </form>
+          <br/><p>Not having account <Link className={styles.underLink} href={"/auth/register"}>Register</Link></p>
         </div>
         
       </div>

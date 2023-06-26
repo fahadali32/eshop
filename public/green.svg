@@ -1,0 +1,74 @@
+<svg width="621" height="392" viewBox="0 0 621 392" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_112_9)">
+        <rect width="621" height="392" fill="white" />
+        <rect x="1" width="621" height="392" fill="#00FF00" />
+        <ellipse cx="182.5" cy="261.585" rx="134.093" ry="136.268"
+            transform="rotate(-2.32048 182.5 261.585)" fill="url(#paint0_linear_112_9)" />
+        <ellipse cx="113.5" cy="87.1361" rx="93.1984" ry="83.431"
+            transform="rotate(-2.32048 113.5 87.1361)" fill="url(#paint1_linear_112_9)" />
+        <ellipse cx="68.5476" cy="256.136" rx="66.6394" ry="48.4776"
+            transform="rotate(-2.32048 68.5476 256.136)" fill="url(#paint2_linear_112_9)" />
+        <ellipse cx="311.5" cy="87.1361" rx="93.1984" ry="83.431"
+            transform="rotate(-2.32048 311.5 87.1361)" fill="url(#paint3_linear_112_9)" />
+        <ellipse cx="541.5" cy="263.136" rx="93.1984" ry="83.431"
+            transform="rotate(-2.32048 541.5 263.136)" fill="url(#paint4_linear_112_9)" />
+        <ellipse cx="589.5" cy="52.1619" rx="128.867" ry="117.04"
+            transform="rotate(-2.32048 589.5 52.1619)" fill="url(#paint5_linear_112_9)" />
+        <ellipse cx="354.5" cy="296.162" rx="128.867" ry="117.04"
+            transform="rotate(-2.32048 354.5 296.162)" fill="url(#paint6_linear_112_9)" />
+        <ellipse cx="631.5" cy="317.162" rx="128.867" ry="117.04"
+            transform="rotate(-2.32048 631.5 317.162)" fill="url(#paint7_linear_112_9)" />
+        <ellipse cx="444.5" cy="184.162" rx="128.867" ry="117.04"
+            transform="rotate(-2.32048 444.5 184.162)" fill="url(#paint8_linear_112_9)" />
+    </g>
+    <defs>
+        <linearGradient id="paint0_linear_112_9" x1="129.377" y1="125.318" x2="403.198" y2="426.53"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#09FF30" stop-opacity="0.63" />
+            <stop offset="0.739691" stop-color="white" stop-opacity="0.79" />
+        </linearGradient>
+        <linearGradient id="paint1_linear_112_9" x1="76.578" y1="3.7051" x2="240.918" y2="208.925"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#09FF30" stop-opacity="0.63" />
+            <stop offset="0.739691" stop-color="white" stop-opacity="0.79" />
+        </linearGradient>
+        <linearGradient id="paint2_linear_112_9" x1="42.1473" y1="207.658" x2="131.618" y2="345.147"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#09FF30" stop-opacity="0.63" />
+            <stop offset="0.739691" stop-color="white" stop-opacity="0.79" />
+        </linearGradient>
+        <linearGradient id="paint3_linear_112_9" x1="274.578" y1="3.7051" x2="438.918" y2="208.925"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#09FF30" stop-opacity="0.63" />
+            <stop offset="0.739691" stop-color="white" stop-opacity="0.79" />
+        </linearGradient>
+        <linearGradient id="paint4_linear_112_9" x1="504.578" y1="179.705" x2="668.918" y2="384.925"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#09FF30" stop-opacity="0.63" />
+            <stop offset="0.739691" stop-color="white" stop-opacity="0.79" />
+        </linearGradient>
+        <linearGradient id="paint5_linear_112_9" x1="538.447" y1="-64.8783" x2="769.697"
+            y2="219.751" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#09FF30" stop-opacity="0.63" />
+            <stop offset="0.739691" stop-color="white" stop-opacity="0.79" />
+        </linearGradient>
+        <linearGradient id="paint6_linear_112_9" x1="303.447" y1="179.122" x2="534.697" y2="463.751"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#09FF30" stop-opacity="0.63" />
+            <stop offset="0.739691" stop-color="white" stop-opacity="0.79" />
+        </linearGradient>
+        <linearGradient id="paint7_linear_112_9" x1="580.447" y1="200.122" x2="811.697" y2="484.751"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#09FF30" stop-opacity="0.63" />
+            <stop offset="0.739691" stop-color="white" stop-opacity="0.79" />
+        </linearGradient>
+        <linearGradient id="paint8_linear_112_9" x1="393.447" y1="67.1217" x2="624.697" y2="351.751"
+            gradientUnits="userSpaceOnUse">
+            <stop stop-color="#09FF30" stop-opacity="0.63" />
+            <stop offset="0.739691" stop-color="white" stop-opacity="0.79" />
+        </linearGradient>
+        <clipPath id="clip0_112_9">
+            <rect width="621" height="392" fill="white" />
+        </clipPath>
+    </defs>
+</svg>

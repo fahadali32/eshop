@@ -19,7 +19,7 @@ const handler = nc({
   })
   
   const store = new MongoDBStore({
-    uri: `mongodb+srv://${process.env.UNAME}:${process.env.PASS}@cluster0.ugi7clf.mongodb.net/session?retryWrites=true&w=majority`,
+    uri: `mongodb+srv://eshop:Gf5TjwlyylQXso80@cluster0.ugi7clf.mongodb.net/session?retryWrites=true&w=majority`,
     collection: 'mySessions'
   });
   

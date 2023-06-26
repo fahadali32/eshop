@@ -21,12 +21,15 @@ handler.use(cors())
 handler.get(async(req,res)=>{
         
     console.log("cookie from back");
-    const data = await Product.find()
+    const data = await Product.find().limit(4)
+    const anotherProduct = await Product.find().skip(4)
+    
     if (req?.headers?.cookie != undefined) {
       const find_pro = await Cart.find({ did:getCookie('token', { req, res }) || "" })  
-      res.json({data:data,adpd:find_pro})
+      res.json({data:data,anotherProduct:anotherProduct,adpd:find_pro})
+      
     }else{
-      res.json({data:data,adpd:{}})
+      res.json({data:data,anotherProduct:anotherProduct,adpd:{}})
     }
     
     // console.log(process.env.MONGODB_URI);

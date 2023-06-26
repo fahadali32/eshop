@@ -2,9 +2,9 @@ import mongoose from 'mongoose';
 var Schema = mongoose.Schema;
 
 mongoose.set('strictQuery', false);
-// console.log(process.env.UNAME,process.env.PASS);
+console.log(process.env.UNAME,process.env.PASS);
 mongoose.connect(
-  `mongodb+srv://${process.env.UNAME}:${process.env.PASS}@cluster0.ugi7clf.mongodb.net/Shop?retryWrites=true&w=majority`,
+  `mongodb+srv://eshop:Gf5TjwlyylQXso80@cluster0.ugi7clf.mongodb.net/Shop?retryWrites=true&w=majority`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true

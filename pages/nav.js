@@ -30,6 +30,7 @@ function Nav(props) {
       router.push('/').then(() => router.reload())
     }
   }
+  console.log(isAuth?.passport?.user);
   function find(e) {
 
     //setDisplay("flex")
@@ -104,7 +105,7 @@ function Nav(props) {
       <div id="mnav" className={styles.Mnavbar}>
         
         <div className={styles.Mnavs}>
-        <input autoComplete="new-password" type={"search"} className={styles.searchInput} name="search" onChange={(e)=>{find(e)}}></input>
+        <input autoComplete="new-password" type={"search"} className={styles.searchInput} name="search" placeholder="Search product " onChange={(e)=>{find(e)}}></input>
         <div style={{display:display}} className={styles.searchbox}>
         {data.length == 0 ? (<div style={{display:display}} className={styles.notfound}>Not found</div>) : data.map((product,key)=>{
             return(
@@ -114,9 +115,11 @@ function Nav(props) {
             )
         })}
         </div>
+        {console.log(isAuth?.passport?.user?.name)}
         {isAuth?.passport ? 
             <Link href={"#"}>
-              <a>Hello Fahad</a>
+              
+              <a>User: {isAuth?.passport?.user?.name}</a>
             </Link>
             :""
           }
@@ -145,7 +148,7 @@ function Nav(props) {
           <div className={styles.logo}>
               <Image src={'/logo.svg'} alt="Logo" width={50} height={50} layout="responsive"></Image>
           </div>
-          <input type={"search"} name="search" onChange={(e)=>{find(e)}}></input>
+          <input type={"search"} name="search" placeholder="Search product or enter name" onChange={(e)=>{find(e)}}></input>
           <div className={styles.navholder}>
             <Link href={"/mycart"}>
               <a className={styles.cl}><p className={styles.numberqt}>{props.qty}</p><FaShoppingCart/></a>

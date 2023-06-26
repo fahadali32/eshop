@@ -9,12 +9,13 @@ passport.use( new LocalStrategy({ usernameField: 'email',passwordField:'password
   const result = await Auth.find({
     email:username
   })
-//   console.log(result.length);
+  console.log("result");
+  // console.log(result[0]?.first_name);
   if (result.length != 1) {
     return done(null,false,{ info:"You are not a valid user" })  
   }else{
     if (result[0]?.password == password) {
-      return done(null,{ info:result[0].email })
+      return done(null,{ info:result[0].email,name:`${result[0]?.first_name} ${result[0]?.last_name}` })
     } else {
       return done(null,false,{ info:"Wrong email/password" })
     }
@@ -24,6 +25,7 @@ passport.use( new LocalStrategy({ usernameField: 'email',passwordField:'password
 ));
 
 passport.serializeUser(function (user, done) {
+  console.log(user);
   console.log(`from serialize ${user.info}`);
   done(null, user);
 });
@@ -34,11 +36,13 @@ passport.deserializeUser(async function(id, done) {
   const result = await Auth.find({
     email:id.info
   })
+  console.log("info");
   done(null,result)
 })
 
 handler.post(async function (req,res,next) {
-  console.log(await Auth.find());
+  // console.log(await Auth.find());
+
   passport.authenticate('local',
   (err, user, info) => {
     if (err) {

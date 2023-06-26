@@ -10,6 +10,7 @@ const nextConfig = {
     'images.puma.com',
     'rukminim1.flixcart.com',
     'avatars.dicebear.com',
+    'jevelin.shufflehound.com',
     ],
   },
 }
