@@ -107,7 +107,7 @@ export default function Home(props) {
     <div>
       <Head>
         <title>E-Shop</title>
-        <meta name="description" content="E-Shop" />
+        <meta name="description" content="E-Shop your desire ecommerce site." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav prodata={props.data} qty={qty} position={position} width={width} />

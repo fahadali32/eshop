@@ -57,7 +57,7 @@ handler.post(async function (req,res,next) {
       if (err) {
         return next(err);
       }
-      //console.log(`for checking ${req?.session?.passport?.user?.info}`);
+      console.log(`for checking ${req?.session?.passport?.user?.info}`);
       const user = req?.session?.passport?.user?.info
       const ck = getCookie('token', { req, res }) || null
       const save_data = await Auth.updateOne({

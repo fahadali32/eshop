@@ -262,8 +262,11 @@ function SLug(props) {
       ) : (
         <div>
           <Head>
-            <title>E-Shop</title>
-            <meta name="description" content="E-Shop" />
+            <title>{data["title"]}</title>
+            <meta
+              name="description"
+              content="E-Shop your desire ecommerce site."
+            />
             <link rel="icon" href="/favicon.ico" />
           </Head>
           <Nav prodata={props?.data2?.data} qty={qty} />
@@ -396,7 +399,7 @@ function SLug(props) {
           </div>
         </div>
       )}
-      <Footer/>
+      <Footer />
     </div>
   );
 }

@@ -55,15 +55,16 @@ function Login(props) {
         }
       );
       
-      console.log(result.data);
-      setMsg(result.data)
-      if (result.status == 200 && result.data?.isAuth) {
+      // console.log(result.data);
+      // setMsg(result.data)
+      if (result.status == 200 && result?.data?.isAuth) {
         router.push("/")
       }else{
         setMsg(result.data)
       }
 
     } catch (error) {
+      console.log(error);
       setMsg(error?.response?.request?.response.split(":")[1].split("}")[0].split('"')[1]);
       
       

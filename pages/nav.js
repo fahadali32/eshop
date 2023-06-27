@@ -20,6 +20,7 @@ function Nav(props) {
   const [isAuth, setAuth] = useState();
 
   const user = useUser();
+  console.log(user);
   useEffect(() => {
     setAuth(user);
   }, [user]);
@@ -94,15 +95,15 @@ function Nav(props) {
       >
         <Link href={"/"}>
           <a>
-          <div className={styles.logo}>
-            <Image
-              src={"/logo.svg"}
-              alt="Logo"
-              width={50}
-              height={50}
-              layout="responsive"
-            ></Image>
-          </div>
+            <div className={styles.logo}>
+              <Image
+                src={"/logo.svg"}
+                alt="Logo"
+                width={50}
+                height={50}
+                layout="responsive"
+              ></Image>
+            </div>
           </a>
         </Link>
         <div className={styles.Micon}>
@@ -154,9 +155,10 @@ function Nav(props) {
               })
             )}
           </div>
-          {console.log(isAuth?.passport?.user?.name)}
+          {/* {console.log(isAuth?.passport?.user?.name)} */}
           {isAuth?.passport ? (
             <Link href={"#"}>
+              
               <a>User: {isAuth?.passport?.user?.name}</a>
             </Link>
           ) : (
@@ -272,7 +274,6 @@ function Nav(props) {
             </div>
           ) : (
             data.map((product, key) => {
-              
               return (
                 <div
                   id="searchtitle"
