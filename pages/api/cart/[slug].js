@@ -23,6 +23,7 @@ handler.put(async function (req, res) {
             const result = await data.save()
             res.status(200).json(res.json({data:1,array:result}))
         } catch (error) {
+            console.log(error);
             res.status(200).json({data:0,array:JSON.stringify(error)})
         }
     }
