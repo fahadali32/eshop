@@ -9,10 +9,22 @@
   align-items: center;
 }
 .fooLogo {
-  width: 30%;
+  /* width: 100%; */
+  max-width: 100%;
+  min-width: 100px;
 }
-.position{
-    display: flex;
-    width: 30%;
-    align-items: center;
+.position {
+  display: flex;
+  width: 30%;
+  align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .fooLogo {
+    /* width: 100%; */
+    max-width: 100%;
+    min-width: 100px;
+  }
+  .position > p {
+    font-size: 0.5rem;
+  }
 }

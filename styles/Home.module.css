@@ -466,7 +466,7 @@ justify-content: space-between; */
         padding-top: 6vw;
         justify-content: center;
         align-items: center;
-        gap: 20px;
+        gap: 6px;
     }
     .cartBody > div{
         margin: 0px;
@@ -489,7 +489,7 @@ justify-content: space-between; */
         transition: all 1s;
     }
     .container:hover{
-        transform: scale(1.1);
+        transform: scale(0.98);
     }
     .imagebox{
         position: relative;

@@ -253,7 +253,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        left: 4vmax;
+        /* left: 4vmax; */
     }
     .imgslide{
         width: 100px;
